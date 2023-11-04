@@ -1,0 +1,59 @@
+/* Custom styles for the certificate using the provided image */
+.certificate-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 2px solid #007bff;
+    font-family: 'Arial', sans-serif;
+}
+
+.certificate-content {
+    color: #000;
+    text-align: center;
+    padding: 20px;
+}
+
+.certificate-header img {
+    max-width: 100%;
+}
+
+.certificate-title {
+    font-size: 36px;
+    margin-top: 10px;
+    color: #007bff;
+}
+
+.recipient {
+    font-size: 24px;
+    color: #000;
+    margin-top: 10px;
+}
+
+.certifying-body {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.event-name {
+    font-size: 28px;
+    color: #007bff;
+    margin-top: 10px;
+}
+
+.validity-period {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.signature, .official-signature {
+    font-weight: bold;
+}
+
+.official-signature {
+    color: #007bff;
+    font-size: 20px;
+    margin-top: 20px;
+}
+a.btn.btn-pirmary {
+    margin-left: 666px;
+}

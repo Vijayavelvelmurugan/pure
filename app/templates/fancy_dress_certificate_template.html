@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/op.css' %}">
+    <title>Certificate of Participation</title>
+</head>
+<body>
+     
+    <!-- Certificate of Participation -->
+    <div class="certificate-container">
+        <div class="certificate-content">
+            <div class="certificate-header">
+                <img src="{% static 'img/SDClogo.jpg' %}" alt="Certificate Header">
+                <h1 class="certificate-title">Certificate of Participation</h1>
+            </div>
+            <p class="certifying-body">This is to certify that</p>
+            <h3 class="recipient">{{ fname }}</h3>
+            <p class="certifying-body">has successfully participated in</p>
+            <h3 class="event-name"><strong>Fancy Dress Competition</strong></h3>
+            <p class="validity-period">Date of Participation: <span id="registration-date">{{ registration_date }}</span></p>
+            <p class="certifying-body">Certificate Registration No. <strong><span id="registration-no">{{ registration_no }}</span></strong></p>
+            <p class="signature">Signature</p>
+            <p class="official-signature"><strong>UNSDC</strong></p>
+        </div>
+    </div>
+
+    <div class="text-center"> <!-- Center-align the content -->
+        <a href="#" id="downloadCertificateButton" class="btn btn-primary">Download Certificate</a>
+    </div>
+    
+    
+
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    <script>
+        // Add an event listener to the "Download Certificate" button
+        document.getElementById('downloadCertificateButton').addEventListener('click', function () {
+            // Capture the content of the certificate-container and convert it to an image
+            html2canvas(document.querySelector('.certificate-container')).then(function (canvas) {
+                // Convert the canvas to a data URL
+                const imgData = canvas.toDataURL('image/png');
+
+                // Create a download link and trigger the download
+                const downloadLink = document.createElement('a');
+                downloadLink.href = imgData;
+                downloadLink.download = 'certificate.png';
+                downloadLink.click();
+            });
+        });
+        
+            // Function to generate an 8-character alphanumeric registration number
+            function generateRegistrationNumber() {
+                const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+                let registrationNo = '';
+                for (let i = 0; i < 8; i++) {
+                    registrationNo += characters.charAt(Math.floor(Math.random() * characters.length));
+                }
+                return registrationNo;
+            }
+        
+            // Function to format the current date as yyyy-mm-dd
+            function getCurrentDate() {
+                const today = new Date();
+                const year = today.getFullYear();
+                let month = today.getMonth() + 1;
+                let day = today.getDate();
+        
+                if (month < 10) {
+                    month = '0' + month;
+                }
+        
+                if (day < 10) {
+                    day = '0' + day;
+                }
+        
+                return year + '-' + month + '-' + day;
+            }
+        
+            // Update the registration_date and registration_no elements
+            document.getElementById('registration-date').textContent = getCurrentDate();
+            document.getElementById('registration-no').textContent = generateRegistrationNumber();
+        
+            // Add an event listener to the "Download Certificate" button
+            document.getElementById('downloadCertificateButton').addEventListener('click', function () {
+                // Capture the content of the certificate-container and convert it to an image
+                html2canvas(document.querySelector('.certificate-container')).then(function (canvas) {
+                    // Convert the canvas to a data URL
+                    const imgData = canvas.toDataURL('image/png');
+        
+                    // Create a download link and trigger the download
+                    const downloadLink = document.createElement('a');
+                    downloadLink.href = imgData;
+                    downloadLink.download = 'certificate.png';
+                    downloadLink.click();
+                });
+            });
+        </script>
+        <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

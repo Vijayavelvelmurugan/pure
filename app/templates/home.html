@@ -1,0 +1,387 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Center for Innovative Education and Development Research
+    </title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  </head>
+  <body>
+    {% if messages %}
+          <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+    <section class="newsSection">
+      <div
+        class="positionFixedDiv container-fluid d-flex justify-content-center"
+      >
+        <div class="p-3">
+          Participate and achieve Mahatma Gandhiji Remembrance Medal
+        </div>
+        <div class="p-3">
+          <a href="">
+            <button type="button" class="btn"><a href="signup"> SUBMIT NOW </a></button>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="navBarTop">
+      <div class="navBarTopDiv container-fluid d-flex justify-content-around">
+        <div class="p-3">
+          <ul class="d-inline-flex">
+            <li>
+              <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="p-3 contactDetails">
+          <ul class="d-inline-flex">
+            <li>
+              <a href=""
+                ><i class="fa-solid fa-mobile-screen-button"></i>9384620003</a
+              >
+            </li>
+            <li>
+              <a href=""
+                ><i class="fa-regular fa-message"></i>info@ciedr.org
+              </a>
+            </li>
+            <li>
+              <a href=""><i class="fa-solid fa-location-pin"></i></a>india
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="navBarDetails">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light container">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img class="navBarDetailsimg" src="{% static 'img/crop.jpeg' %}" alt="" />    
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">ABOUT US</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">EVENTS</a>
+              </li>
+              <li class="nav-item">
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">WINNERS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="signin">LOGIN</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+              <div class="searchicon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+              <button class="btn btn-outline-success" type="submit"><a href="signup"> SUBMIT NOW </a></button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <section class="celebratePart" style="background-image: url('{% static 'img/Gandhi-Poster-1.png' %}')">
+      <div class="celebratePartDiv">
+        <div>
+            
+          <h6>Let's Celebrate and remember</h6>
+          <h1>Gandhi Jayanti</h1>
+          <p>
+            Participate in CIEDR Gandhi Jayanti and earn the prestigious Mahatma
+            GandhiJi Remembrance Medal. This program offers a unique opportunity
+            to commemorate the legacy of Mahatma Gandhi while contributing to a
+            noble cause. Gandhi Jayanti is an event celebrated in India to mark
+            the birthday of Mahatma Gandhi.The UN General Assembly announced on
+            15 June 2007 that it adopted a resolution which declared that 2
+            October will be celebrated as the International Day of Non-Violence
+            as he was a non-violent freedom fighter.
+          </p>
+          <div class="translateSand">
+                      {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            <a href="signup"> SUBMIT NOW </a>
+            <i class="fa-brands fa-telegram"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="picAndDetails">
+      <div class="card mb-3" style="max-width: 100%">
+        <div class="row g-0">
+          <div class="col-md-8">
+            <img
+            src="{% static "img/Mahatma-Gandhi-Poster-2-768x384.png" %}"   
+              class="img-fluid rounded-start"
+              alt=""
+            />
+          </div>
+          <div class="col-md-4">
+            <div class="card-body">
+              <h5 class="card-title">Free 300 &#8377;</h5>
+              <div class="translateSandDetails">
+                <a href="signup"> SUBMIT NOW </a>
+                <i class="fa-brands fa-telegram"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="Certificates">
+      <div>
+        <h5>
+          <span style="color: #ff0000"
+            ><strong
+              >**Medal and Printed Certificates will be provided to all
+              Participants.</strong
+            ></span
+          >
+        </h5>
+      </div>
+    </section>
+    <section class="Certificatesberify">
+      <div>
+        <p>
+          <u>What you have to do?<br /></u>&gt; Register yourself in online to
+          participate in this Event.<br />&gt; Prepare yourself to perform the
+          task for registered event.<br />&gt; Perform the event task as your
+          comfortable &amp; available time Submit your task on the Given
+          date.<br />
+        </p>
+      </div>
+    </section>
+    <section class="participate">
+      <div class="container-fluid">
+        <img
+          class="img-fluid"
+          src="{% static 'img/ciedr-event-header-1-2-2048x569.png' %}"
+          alt=""
+        />
+      </div>
+    </section>
+    <section class="participate1">
+      <div class="container p-2">
+        <img class="img-fluid"   src="{% static 'img/general-rules-1.png' %}"
+        alt=""/>  
+      </div>
+    </section>
+    <section class="participate2">
+      <div class="container p-2">
+        <img class="img-fluid" src="{% static 'img/Drawing-2.png' %}"
+         alt="" />   
+      </div>
+    </section>
+    <section class="participate3">
+      <div class="container p-2">
+        <img class="img-fluid" src="{% static 'img/essay-3.png' %}" alt="" />   
+      </div>
+    </section>
+    <section class="participate4">
+      <div class="container p-2">
+        <img class="img-fluid" src="{% static 'img/fancy-6.png' %}" alt="" />   
+      </div>
+    </section>
+    <section class="participate5">
+      <div class="container p-2">
+        <img class="img-fluid" src="{% static 'img/gandhi-7.png' %}" alt="" /> 
+      </div>
+    </section>
+    <section class="participateWinners">
+      <div class="container my-3 mt-5" id="featureContainer">
+        <div class="row mx-auto my-auto justify-content-center">
+          <div
+            id="featureCarousel"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <h2 class="font-weight-light mt-5">Winners of Past events</h2>
+            <div class="float-end pe-md-4">
+              <a
+                class="indicator"
+                href="#featureCarousel"
+                role="button"
+                data-bs-slide="prev"
+              >
+                <span class="fas fa-chevron-left" aria-hidden="true"></span>
+              </a>
+              &nbsp;&nbsp;
+              <a
+                class="w-aut indicator"
+                href="#featureCarousel"
+                role="button"
+                data-bs-slide="next"
+              >
+                <span class="fas fa-chevron-right" aria-hidden="true"></span>
+              </a>
+            </div>
+            <div class="carousel-inner" role="listbox">
+              <div class="carousel-item active">
+                <div class="col-md-3">
+                  <div class="card">
+                    <div class="card-img">
+                      <img src="{% static 'img/CIDER-Winner-1.jpeg' %}" class="img-fluid" />  
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-3">
+                  <div class="card">
+                    <div class="card-img">
+                      <img src="{% static 'img/CIDER-Winner-2.jpeg' %}" class="img-fluid" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-3">
+                  <div class="card">
+                    <div class="card-img">
+                      <img src="{% static 'img/CIDER-Winner-3.jpeg' %}" class="img-fluid" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-3">
+                  <div class="card">
+                    <div class="card-img">
+                      <img src="{% static 'img/CIDER-Winner-4.jpeg' %}" class="img-fluid" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-3">
+                  <div class="card">
+                    <div class="card-img">
+                      <img src="{% static 'img/CIDER-Winner-5.jpeg' %}" class="img-fluid" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-3">
+                  <div class="card">
+                    <div class="card-img">
+                      <img src="{% static 'img/CIDER-Winner-6.jpeg' %}" class="img-fluid" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-3">
+                  <div class="card">
+                    <div class="card-img">
+                      <img src="{% static 'img/CIDER-Winner-7.jpeg' %}" class="img-fluid" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-3">
+                  <div class="card">
+                    <div class="card-img">
+                      <img src="{% static 'img/CIDER-Winner-8.jpeg' %}" class="img-fluid" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="footerSection">
+      <footer>
+        <div>
+          <ul>
+            <li>About Us /</li>
+            <li>Events /</li>
+            <li>Winners /</li>
+          </ul>
+          <p>
+            Copyright ©2023 Centre for Innovative Education and Development
+            Research . All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      let items2 = document.querySelectorAll(
+        "#featureContainer .carousel .carousel-item"
+      );
+
+      items2.forEach((el) => {
+        const minPerSlide = 4;
+        let next = el.nextElementSibling;
+        for (var i = 1; i < minPerSlide; i++) {
+          if (!next) {
+            // wrap carousel by using first child
+            next = items2[0];
+          }
+          let cloneChild = next.cloneNode(true);
+          el.appendChild(cloneChild.children[0]);
+          next = next.nextElementSibling;
+        }
+      });
+      $(document).ready(function () {
+        $("#featureCarousel").carousel({ interval: false });
+        $("#featureCarousel").carousel("pause");
+      });
+    </script>
+  </body>
+</html>
